@@ -1,0 +1,52 @@
+// Importing Scanner class for user input
+import java.util.Scanner;
+
+// creating a class Book to store and display book details
+class Book
+{
+    // creating attribute of the Book class
+    private String title;
+	private String author;
+	private int price;
+	
+	// creating Constructor of the class
+    Book(String title, String author, int price)
+    {
+	     this.title = title;
+		 this.author = author;
+		 this.price = price;
+    }
+	
+	// Method to display book details
+    public void displayDetails()
+    {
+	     System.out.println("Book title is " + title);
+		 System.out.println("Book author is " + author);
+		 System.out.println("Book price is " + price);
+    }
+}
+
+// creating Main class
+class BookDetails
+{
+    // creating Main method of the class
+    public static void main(String[] args)
+	{
+	   Scanner input = new Scanner(System.in);
+	   
+	   // Taking user input
+	   System.out.println("Enter the title of the book ");
+	   String title = input.nextLine();
+	   System.out.println("Enter the author of the book ");
+	   String author = input.nextLine();
+	   System.out.println("Enter the price of the book ");
+	   int price = input.nextInt();
+	   
+	   // creating object of Book class
+	   Book object = new Book(title,author,price);
+	   
+	   // Displaying details of book
+	   System.out.println("Book Details are ");
+	   object.displayDetails();
+	}
+}
